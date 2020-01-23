@@ -20,3 +20,20 @@ Template.hello.events({
     instance.counter.set(instance.counter.get() + 1);
   },
 });
+
+Template.another.onCreated(function helloOnCreated(){
+	this.counter = new ReactiveVar(0);	
+});
+
+Template.another.helpers({
+  counter2() {
+    return Template.instance().counter.get();
+  },
+});
+
+Template.another.events({
+  'click button'(event, instance) {
+    // increment the counter when button is clicked
+    instance.counter.set(instance.counter.get() + 4);
+  },
+});

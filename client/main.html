@@ -7,6 +7,7 @@
 
   {{> hello}}
   {{> info}}
+  {{>another}}
 </body>
 
 <template name="hello">
@@ -15,6 +16,7 @@
 </template>
 
 <template name="info">
+  <h1>Israel Lewis</h1>
   <h2>Learn Meteor!</h2>
   <ul>
     <li><a href="https://www.meteor.com/try" target="_blank">Do the Tutorial</a></li>
@@ -22,4 +24,9 @@
     <li><a href="https://docs.meteor.com" target="_blank">Read the Docs</a></li>
     <li><a href="https://forums.meteor.com" target="_blank">Discussions</a></li>
   </ul>
+</template>
+
+<template name ="another">
+  <button>ClickMeToo!</button>
+  <p>You've pressed this one {{counter2}} times.</p>
 </template>
